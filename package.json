@@ -1,0 +1,19 @@
+{
+  "name": "climate-change-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "git": "https://github.com/0APOCALYPSE0/climate-change-api.git",
+  "author": "Aakash Giri",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cheerio": "^1.0.0-rc.12",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  }
+}
