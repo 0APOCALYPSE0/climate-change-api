@@ -79,7 +79,7 @@ const scrapeArticles = (newsPaper, climateArticles) => {
     $('a:contains("climate")',html).each(function() {
       const title = $(this).text();
       const url = $(this).attr("href");
-      climateArticles.push({ title, url: newsPaper.base+url, newspaper: newsPaper.name });
+      climateArticles.push({ title, url: newsPaper.base+url, source: newsPaper.name });
     })
   })
   .catch(err => console.log(err));
@@ -111,7 +111,7 @@ app.get("/news/:newspaperId", async (req, res) => {
     $('a:contains("climate")',html).each(function() {
       const title = $(this).text();
       const url = $(this).attr("href");
-      specificArticles.push({ title, url: newspaper.base+url, newspaper: newspaper.name });
+      specificArticles.push({ title, url: newspaper.base+url, source: newspaper.name });
     })
     res.status(200).json(specificArticles);
   })
